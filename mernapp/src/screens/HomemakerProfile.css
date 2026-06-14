@@ -1,0 +1,165 @@
+/* src/screens/HomemakerProfile.css */
+
+.chef-profile-page {
+  min-height: 100vh;
+  background-color: #F9FAFB;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 5rem;
+}
+
+/* ── Hero Banner ─────────────────────────────────────────── */
+.chef-profile-hero {
+  position: relative;
+  height: 280px;
+  background: linear-gradient(135deg, rgba(234, 88, 12, 0.1), rgba(249, 115, 22, 0.2)),
+              url('https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=2670&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.chef-profile-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
+}
+
+.back-btn-wrap {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.back-btn {
+  background: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-4px);
+}
+
+/* ── Profile Header Card ─────────────────────────────────────────── */
+.chef-info-container {
+  max-width: 1000px;
+  margin: -80px auto 3rem;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.chef-info-card {
+  background: white;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chef-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.chef-profile-img-wrap {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.chef-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chef-profile-details {
+  flex-grow: 1;
+}
+
+.chef-profile-name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 0.5rem;
+  letter-spacing: -1px;
+}
+
+.chef-profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4B5563;
+}
+
+.meta-item.rating {
+  color: #F59E0B;
+}
+
+.chef-profile-bio {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4B5563;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #F3F4F6;
+  font-style: italic;
+}
+
+/* ── Menu Section ─────────────────────────────────────────── */
+.chef-menu-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chef-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* ── Reponsiveness ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .chef-profile-top { flex-direction: column; text-align: center; gap: 1.5rem; }
+  .chef-profile-meta { justify-content: center; }
+  .chef-profile-name { font-size: 2rem; }
+  .chef-info-card { padding: 1.5rem; }
+  .meta-item { font-size: 0.85rem; }
+}

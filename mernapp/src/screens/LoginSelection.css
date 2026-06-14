@@ -1,0 +1,166 @@
+/* src/screens/LoginSelection.css */
+
+.login-selection-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F9FAFB;
+  padding: 2rem;
+}
+
+.login-selection-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.login-selection-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.login-selection-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.login-selection-header p {
+  font-size: 1.1rem;
+  color: #6B7280;
+}
+
+.login-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.login-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #E5E7EB;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.login-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #F97316;
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.login-card:hover .icon-wrapper {
+  transform: scale(1.1);
+}
+
+.icon-wrapper svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Role Specific Colors */
+.customer-card .icon-wrapper {
+  background-color: #FFF7ED;
+  color: #F97316; /* Orange */
+}
+
+.homemaker-card .icon-wrapper {
+  background-color: #ECFDF5;
+  color: #10B981; /* Green */
+}
+
+.admin-card .icon-wrapper {
+  background-color: #EFF6FF;
+  color: #3B82F6; /* Blue */
+}
+
+.login-card:hover.customer-card {
+  border-color: #F97316;
+}
+.login-card:hover.homemaker-card {
+  border-color: #10B981;
+}
+.login-card:hover.admin-card {
+  border-color: #3B82F6;
+}
+
+.login-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.login-card p {
+  color: #6B7280;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.login-card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.customer-card .login-card-btn {
+  background-color: #F97316;
+  color: white;
+}
+.customer-card:hover .login-card-btn {
+  background-color: #EA580C;
+}
+
+.homemaker-card .login-card-btn {
+  background-color: #10B981;
+  color: white;
+}
+.homemaker-card:hover .login-card-btn {
+  background-color: #059669;
+}
+
+.admin-card .login-card-btn {
+  background-color: #3B82F6;
+  color: white;
+}
+.admin-card:hover .login-card-btn {
+  background-color: #2563EB;
+}
+
+@media (max-width: 768px) {
+  .login-selection-header h1 {
+    font-size: 2rem;
+  }
+  .login-selection-page {
+    padding: 1rem;
+  }
+}

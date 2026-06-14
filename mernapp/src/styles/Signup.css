@@ -1,0 +1,94 @@
+/* Full-screen background image */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/public/images/background.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Signup Card Styling */
+.signup-card {
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency for better readability */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+  margin: auto;
+  position: relative; /* Ensure it stays on top of the background */
+  z-index: 1;
+}
+
+/* Title */
+.signup-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ff6f61;
+}
+
+/* Signup Button */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background: #ff6f61;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e63946;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Loading Button (Disabled) */
+.signup-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Signup Link */
+.signup-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

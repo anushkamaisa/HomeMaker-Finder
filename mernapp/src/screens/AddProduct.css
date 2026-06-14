@@ -1,0 +1,32 @@
+.add-product-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .product-form input,
+  .product-form select {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .product-form button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .message {
+    margin-top: 1rem;
+    color: green;
+  }
+  

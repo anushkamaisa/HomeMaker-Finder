@@ -1,0 +1,275 @@
+/* src/screens/Home.css */
+
+.home-container {
+  min-height: 100vh;
+  background-color: #F9FAFB;
+  overflow-x: hidden;
+}
+
+/* Sections Base */
+.section {
+  padding: 80px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-title {
+  color: #111827;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  color: #6B7280;
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-title-highlight {
+  color: #F97316;
+}
+
+/* Popular Dishes Grid */
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+/* Features Section ("Why Choose Us") */
+.features-section {
+  background-color: #ffffff;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.feature-card {
+  padding: 32px 24px;
+  background: #F9FAFB;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+  border: 1px solid #F3F4F6;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: #ffffff;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: #FFF7ED;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px auto;
+  font-size: 2.5rem;
+  color: #F97316;
+}
+
+.feature-title {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.feature-desc {
+  color: #6B7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Top Homemakers Section */
+.homemakers-section {
+  background-color: #FFF7ED;
+}
+
+.homemaker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.homemaker-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #FFEDD5;
+}
+
+.homemaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(249, 115, 22, 0.1);
+  border-color: #FDBA74;
+}
+
+.homemaker-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #FFF7ED;
+}
+
+.homemaker-info h4 {
+  color: #111827;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.homemaker-info p {
+  color: #6B7280;
+  font-size: 0.875rem;
+  margin: 0 0 8px 0;
+}
+
+.homemaker-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: #4B5563;
+  font-weight: 500;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-icon {
+  color: #F97316;
+}
+
+/* Auth Modal Styling Overrides (If needed for generic modal structure) */
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1060;
+}
+
+.auth-modal {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  position: relative;
+}
+
+.auth-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #F3F4F6;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6B7280;
+  transition: all 0.2s ease;
+}
+
+.auth-modal-close:hover {
+  background: #E5E7EB;
+  color: #111827;
+}
+
+.auth-modal-title {
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.auth-modal-subtitle {
+  color: #6B7280;
+  margin-bottom: 24px;
+}
+
+.auth-modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-btn {
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.auth-btn-customer {
+  background: #F97316;
+  color: white;
+  border: none;
+}
+
+.auth-btn-customer:hover {
+  background: #EA580C;
+}
+
+.auth-btn-homemaker {
+  background: transparent;
+  color: #111827;
+  border: 1px solid #D1D5DB;
+}
+
+.auth-btn-homemaker:hover {
+  background: #F9FAFB;
+  border-color: #9CA3AF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
